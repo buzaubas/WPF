@@ -1,0 +1,100 @@
+﻿<Window x:Class="WPF.MainWindow"
+        x:Name="TestWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2"
+               FontSize="20"
+               HorizontalAlignment="Center">
+            Сервис отправки почты
+        </Label>
+
+        <Label Grid.Row="1" 
+               Grid.Column="0"
+               FontSize="14"
+               HorizontalContentAlignment="Center">
+            Кому:
+        </Label>
+
+        <TextBox Grid.Row="1" 
+                 Grid.Column="1"
+                 FontSize="14"
+                 Height="21"
+                 x:Name="tbxTo">
+            
+        </TextBox>
+
+        <Label Grid.Row="2" 
+               Grid.Column="0"
+               FontSize="14"
+               HorizontalContentAlignment="Center">
+            Тема:
+        </Label>
+
+        <TextBox Grid.Row="2" 
+                 Grid.Column="1"
+                 FontSize="14"
+                 Height="21"
+                 x:Name="tbxSubject">
+           
+        </TextBox>
+
+        <Label Grid.Row="3" 
+               Grid.Column="0"
+               FontSize="14"
+               HorizontalContentAlignment="Center">
+            Сообщение:
+        </Label>
+
+        <TextBox Grid.Row="3" 
+                 Grid.Column="1"
+                 FontSize="14"
+                 Height="21"
+                 VerticalAlignment="Center"
+                 x:Name="tbxBody">
+          
+        </TextBox>
+        
+        <Button Content="Отправить" 
+                Grid.Row="6" 
+                Grid.ColumnSpan="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                x:Name="btnSentMsg"
+                Height="25"
+                Width="200"
+                Click="btnSentMsg_Click"/>
+        <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
+               x:Name="lblMessage" FontSize="14" VerticalAlignment="Center">***</Label>
+
+        <!--<Button x:Name="btnShowAlert" 
+                Content="Text MSG" Height="20" Width="60"
+                Click="btnShowAlert_Click"
+                Grid.Row="0"> --><!--прекрепленные свойства--><!--
+        </Button>-->
+        
+    </Grid>
+</Window>
